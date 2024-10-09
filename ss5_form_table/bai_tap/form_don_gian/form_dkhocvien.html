@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đăng ký học viên</title>
+</head>
+<body>
+    <form method="post">
+        <h2>ĐĂNG KÝ HỌC VIÊN</h2>
+        <label>Họ và tên</label>
+        <input type="text" name="username"><br><br>
+        <label>Ngày sinh</label>
+        <input type="date" name="birthday"><br><br>
+        <label>Giới tính:
+            <label><input type="radio" name="gender" value="male" >Nam</label>
+            <label><input type="radio" name="gender" value="falmale" >Nữ</label>
+        </label><br><br>
+        <label>Địa chỉ</label>
+        <textarea id="address" name="address" rows="2" cols="20"></textarea><br><br>
+        <label for="classname">Lớp</label>
+        <select id="classname" name="classname">
+            <option value="">-Chọn lớp-</option>
+            <option value="1">JVO1</option>
+            <option value="2">JVO2</option>
+            <option value="3">JVO3</option>
+            <option value="4">JV04</option>
+            <option value="5">JV05</option>
+        </select><br><br>
+        <label>Email</label>
+        <input type="email" name="email"><br><br>
+        <label>Số điện thoại</label>
+        <input type="number" name="phone"><br><br>
+        <button type="submit">Đăng ký</button>
+        <button type="reset">Nhập lại</button>
+    </form>
+</body>
+</html>
