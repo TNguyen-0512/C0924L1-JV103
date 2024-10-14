@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Diện tích và chu vi hình tròn</title>
+</head>
+<body>
+<form>
+    <input type="number" id="duong_kinh" placeholder="Nhập bán kình hình tròn">
+    <button type="button" onclick="tinhS()">Tính diện tích</button>
+    <button type="button" onclick="tinhCv()">Tính chu vi</button>
+    <h3>Diện tích:</h3>
+    <div id="dien_tich"></div>
+    <h3>Chu vi:</h3>
+    <div id="chu_vi"></div>
+</form>
+    <script>
+        function tinhS(){
+            let duong_kinh = document.getElementById("duong_kinh").value;
+            const PI = 3.141592653589793238462;
+            let dien_tich = duong_kinh * PI;
+            document.getElementById("dien_tich").innerHTML = dien_tich.toFixed(2);
+        }
+        function tinhCv(){
+            let duong_kinh = document.getElementById("duong_kinh").value;
+            const PI = 3.141592653589793238462;
+            let Chu_vi=(duong_kinh/2)*(duong_kinh/2)*PI;
+            document.getElementById("chu_vi").innerHTML = Chu_vi.toFixed(2);
+        }
+    </script>
+</body>
+</html>

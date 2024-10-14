@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tổng điểm</title>
+</head>
+<body>
+    <input type="number" id="phy" placeholder="Nhập điểm vật lý">
+    <input type="number" id="che" placeholder="Nhập điểm hoá học">
+    <input type="number" id="bio" placeholder="Nhập điểm sinh học">
+    <button onclick="tinh()">Tính</button>
+    <h3>Điểm trung bình:</h3>
+    <div id="diemtb">0</div>
+    <h3>Tổng điểm:</h3>
+    <div id="diemtong">0</div>
+    <script>
+      function tinh() {
+        let phy = document.getElementById("phy").value;
+        let che = document.getElementById("che").value;
+        let bio = document.getElementById("bio").value;
+        let tong = Number(phy) + Number(che) + Number(bio);
+        document.getElementById("diemtong").innerHTML = tong;
+        let diemtb = (Number(phy) + Number(che) + Number(bio))/3;
+        document.getElementById("diemtb").innerHTML = diemtb;
+      }
+    </script>
+</body>
+</html>
