@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính cước điện thoại</title>
+</head>
+<body>
+<script>
+    let soPhut =+prompt("nhap so phut goi dien");
+    let cuocPhi =0;
+    let phiThueBao = 25000;
+    if (soPhut <= 50) {
+        cuocPhi = soPhut * 600;
+    } else if (soPhut <= 200) {
+        cuocPhi = 50 * 600 + (soPhut - 50) * 400;
+    } else {
+        cuocPhi = 50 * 600 + 150 * 400 + (soPhut - 200) * 200;
+    }
+    let tongCuoc = phiThueBao + cuocPhi;
+    console.log("Tổng cước điện thoại phải trả là: " + tongCuoc + " VND");
+</script>
+</body>
+</html>
