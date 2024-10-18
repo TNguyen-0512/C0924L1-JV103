@@ -6,20 +6,20 @@
 </head>
 <body>
 <script>
-  let doanh_so = +prompt("Nhập doanh số")
-  let hoa_hong_1 = 0.01;
-  let hoa_hong_2 = 0.015;
-  let hoa_hong_3 = 0.02;
-  let tien_thuong;
-  if(doanh_so>= 400 && doanh_so < 600){
-    tien_thuong = doanh_so * hoa_hong_1;
-    alert( "Số tiền nhận được: "+tien_thuong)
-  }else if(doanh_so >= 600 && doanh_so < 800){
-    tien_thuong = doanh_so * hoa_hong_2;
-    alert( "Số tiền nhận được: "+tien_thuong)
-  }else if(doanh_so >= 800 ){
-    tien_thuong = doanh_so * hoa_hong_3;
-    alert( "Số tiền nhận được: "+tien_thuong)
+  let doanhSo = +prompt("Nhập doanh số")
+  let hoaHong1 = 0.01;
+  let hoaHong2 = 0.015;
+  let hoaHong3 = 0.02;
+  let tienThuong;
+  if(doanhSo>= 400 && doanhSo < 600){
+    tienThuong = doanhSo * hoaHong1;
+    alert( "Số tiền nhận được: "+tienThuong)
+  }else if(doanhSo >= 600 && doanhSo < 800){
+    tienThuong = doanhSo * hoaHong2;
+    alert( "Số tiền nhận được: "+tienThuong)
+  }else if(doanhSo >= 800 ){
+    tienThuong = doanhSo * hoaHong3;
+    alert( "Số tiền nhận được: "+tienThuong)
   }else{
     alert("Doanh số không đủ");
   }

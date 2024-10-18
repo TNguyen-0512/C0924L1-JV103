@@ -6,18 +6,18 @@
 </head>
 <body>
 <script>
-  let diem_ktra = +prompt("Nhập điểm kiểm tra");
-  let diem_gky = +prompt("Nhập điểm giữa kỳ");
-  let diem_cky = +prompt("Nhập điểm cuối kỳ");
-  let diem_tk = (diem_cky + diem_gky+ diem_ktra) / 3;
-  if(diem_tk >= 8){
-    alert(diem_tk.toFixed(2) +" :Học lực giỏi");
-  }else if(diem_tk >=6.5 && diem_tk< 8){
-    alert(diem_tk.toFixed(2) +" :Học lực khá");
-  }else if(diem_tk >=4 && diem_tk< 6.5){
-    alert(diem_tk.toFixed(2) +" :Học lực trung bình");
+  let diemKtra = +prompt("Nhập điểm kiểm tra");
+  let diemGky = +prompt("Nhập điểm giữa kỳ");
+  let diemCky = +prompt("Nhập điểm cuối kỳ");
+  let diemTket = (diemCky + diemGky+ diemKtra) / 3;
+  if(diemTket >= 8){
+    alert(diemTket.toFixed(2) +" :Học lực giỏi");
+  }else if(diemTket >=6.5 && diemTket< 8){
+    alert(diemTket.toFixed(2) +" :Học lực khá");
+  }else if(diemTket >=4 && diemTket< 6.5){
+    alert(diemTket.toFixed(2) +" :Học lực trung bình");
   }else{
-    alert(diem_tk.toFixed(2) +" :Học lực yếu");
+    alert(diemTket.toFixed(2) +" :Học lực yếu");
   }
 </script>
 </body>
