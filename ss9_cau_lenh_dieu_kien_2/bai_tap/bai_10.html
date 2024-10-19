@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính giá điện sinh hoạt</title>
+</head>
+<body>
+<form method="post" >
+    <input type="number" id="soDien" placeholder="Nhập điện năng tiêu thụ (kWh)" style="width: 190px;">
+    <button type="button" onclick="tinh()">Tính</button>
+    <p>Tiền điện: </p>
+    <div id="tienDien"></div>
+</form>
+<script>
+    function tinh() {
+        let soDien = document.getElementById("soDien").value;
+        let tienDien;
+
+        if(soDien => 0 && soDien <=50){
+                tienDien = soDien * 1893;
+        }else if(soDien >= 51 && soDien <=100){
+            tienDien = soDien * 1956;
+        }else if(soDien >= 101 && soDien <=200){
+            tienDien = soDien * 2271;
+        }else if(soDien >= 201 && soDien <=300){
+            tienDien = soDien * 2860;
+        }else if(soDien >= 301 && soDien <=400){
+            tienDien = soDien * 3197;
+        }else {
+            tienDien = soDien * 3302;
+        }
+        document.getElementById("tienDien").innerHTML = tienDien + " đồng";
+        if(isNaN(soDien)||soDien < 0){
+            document.getElementById("tienDien").innerHTML = "Lỗi không đúng định dạng!!!";
+        }
+
+    }
+</script>
+</body>
+</html>

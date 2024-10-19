@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Diện tích hình chữ nhật</title>
+</head>
+<body>
+<form method="post">
+    <input type="number" id="height" placeholder="Nhập cạnh a (cm)">
+    <input type="number" id="weight" placeholder="Nhập cạnh b (cm)">
+    <button type="button" onclick="tinh()">Tính</button>
+    <h3>Diện tích: </h3>
+    <div id="div1">0</div>
+</form>
+<script>
+    function tinh() {
+        let a = document.getElementById("height").value;
+        let b = document.getElementById("weight").value;
+        if(a <= 0 || b <= 0) {
+            alert("Số không hợp lệ!!")
+        }else {
+            let S = a *b;
+            document.getElementById("div1").innerHTML = S;
+        }
+    }
+</script>
+</body>
+</html>

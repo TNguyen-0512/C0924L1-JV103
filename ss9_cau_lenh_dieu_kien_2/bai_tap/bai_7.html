@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Phương trình bậc 2</title>
+</head>
+<body>
+<form>
+  <input type="number" id="soA" placeholder="Nhập a"><br><br>
+  <input type="number" id="soB" placeholder="Nhập B"><br><br>
+  <input type="number" id="soC" placeholder="Nhập C">
+  <button type="button" onclick="tinh()">Tính</button>
+  <p>Kết quả:</p>
+  <div id="res"></div>
+</form>
+<script>
+  function tinh() {
+    let soA = parseFloat(document.getElementById("soA").value);
+    let soB = parseFloat(document.getElementById("soB").value);
+    let soC = parseFloat(document.getElementById("soC").value);
+    let x1;
+    let x2;
+    if (isNaN(soA) || soB === 0) {
+      alert("Số A phải là một số khác 0!");
+    }
+    else if (isNaN(soB)) {
+      alert("Số B phải là một số hợp lệ!");
+    }else if (isNaN(soC)) {
+      alert("Số B phải là một số hợp lệ!");
+    }
+    else {
+      let delta = Math.pow(soB, 2) - 4*soA*soC;
+      if(delta < 0) {
+        document.getElementById("res").innerHTML = "Phương trình vô nghiệm!!";
+      }else if (delta === 0) {
+        x1 = -soB/2*soA;
+        document.getElementById("res").innerHTML="Phương trình có nghiệm kép x1 = x2 = " + x1;
+      }else{
+        x1 = (-soB + Math.sqrt(delta)) / (2 * soA);
+        x2 = (-soB - Math.sqrt(delta)) / (2 * soA);
+        document.getElementById("res").innerHTML="x1 :" + x1 + " = " + x2;
+      }
+    }
+  }
+</script>
+</body>
+</html>

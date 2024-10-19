@@ -5,26 +5,24 @@
     <title>Đổi nhiệt độ</title>
 </head>
 <body>
+<form method="post">
   <input type="number" id="c" placeholder="Nhập độ C (Celsius)">
-  <button onclick="doiF()">Đổi F</button> <br>
-  <h3>Độ F:</h3>
-  <div id="doF"></div><br>
+  <button type="button" onclick="doiF()">Đổi F</button> <br>
   <input type="number" id="f" placeholder="Nhập độ F (Fahrenheit)">
-  <button onclick="doiC()">Đổi C</button><br>
-  <h3>Độ C:</h3>
-  <div id="doC"></div>
+  <button type="button" onclick="doiC()">Đổi C</button><br>
+</form>
 <script>
   function doiF() {
   let c = document.getElementById("c").value;
   let f = document.getElementById("f").value;
   let do_F= (9*c/5)+32;
-  document.getElementById("doF").innerHTML = do_F;
+  document.getElementById("f").value = do_F;
   }
   function doiC() {
     let c = document.getElementById("c").value;
     let f = document.getElementById("f").value;
     let do_C= (f -32)*5/9;
-    document.getElementById("doC").innerHTML = do_C;
+    document.getElementById("c").value = do_C;
   }
 </script>
 </body>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Phương trình bậc 1</title>
+</head>
+<body>
+<form method="post" >
+  <input type="number" id="numA" placeholder="Nhập a">
+  <input type="number" id="numB" placeholder="Nhập b">
+  <button type="button" onclick="tinh()">Tính</button><br><br>
+  <div id="result"></div>
+</form>
+<script>
+  function tinh() {
+    let numA = parseFloat(document.getElementById("numA").value);
+    let numB =  parseFloat(document.getElementById("numB").value);
+    if (isNaN(numA) || numA === 0) {
+      alert("Số A phải là một số khác 0!");
+    }
+    else if (isNaN(numB)) {
+      alert("Số B phải là một số hợp lệ!");
+    }else {
+      let x = -numB / numA;
+      document.getElementById("result").innerHTML = "Nghiệm của phương trình là: "+ x;
+    }
+  }
+</script>
+</body>
+</html>

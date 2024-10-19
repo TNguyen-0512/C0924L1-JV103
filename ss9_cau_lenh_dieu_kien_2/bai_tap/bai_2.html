@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2</title>
+</head>
+<body>
+<form method="post">
+    <input type="number" id="met1" placeholder="Nhập độ dài (m)">
+    <button onclick="Change()" type="button">Đổi</button>
+    <h3>Result: </h3>
+    <div id="result">0</div>
+</form>
+<script>
+    function Change() {
+        let met1 = document.getElementById("met1").value;
+        let ft = met1 * 3.2808;
+
+        document.getElementById("result").innerHTML = ft + " feet";
+    }
+</script>
+</body>
+</html>
