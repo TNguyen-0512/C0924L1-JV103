@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 8</title>
+</head>
+<body>
+<button onclick="choiGame()">Bắt đầu</button>
+<script>
+    function choiGame() {
+        let num = +prompt("Số bạn muốn đoán trong khoảng lớn nhất là bao nhiêu? ");
+        let numRandom = Math.random() * num +1;
+        for (let loi = 0; loi < 3 ; loi++){
+            let numDudoan = +prompt("Nhập số bạn dự đoán");
+            if(numDudoan < numRandom){
+                alert("Số bạn dự đoán bé hơn");
+            }else if(numDudoan > numRandom) {
+                alert("Số bạn dự đoán lớn hơn");
+            } else {
+                alert("Bạn đã dự đoán đúng " + numDudoan);
+                break;
+            }
+            if(loi === 2){
+                alert("Bạn hết số lần dự đoán");
+            }
+        }
+    }
+</script>
+</body>
+</html>
