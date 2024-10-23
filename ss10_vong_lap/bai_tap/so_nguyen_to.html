@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Số Nguyên Tố</title>
+</head>
+<body>
+<script>
+    let numbers = +prompt("Nhập số lượng số nguyên tố");
+    let count = 0;
+    let daySo = "";
+
+    for (let n = 2; count < numbers; n++) {
+        let soNguyento = 1;
+        if (n > 2 && n % 2 === 0) {
+            soNguyento = 0;
+        } else {
+            // Math.sqrt(n) là căn bậc 2 của n
+            for (let j = 3; j <= Math.sqrt(n); j += 2) {
+                if (n % j === 0) {
+                    soNguyento = 0;
+                    break;
+                }
+            }
+        }
+        if (soNguyento > 0) {
+            daySo += n + "<br>";
+            count++;
+        }
+    }
+    document.write(numbers+" số nguyên tố đầu tiền là <br> <br>" +daySo);
+
+</script>
+</body>
+</html>
