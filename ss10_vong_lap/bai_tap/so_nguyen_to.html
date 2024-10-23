@@ -11,19 +11,19 @@
     let daySo = "";
 
     for (let n = 2; count < numbers; n++) {
-        let soNguyento = 1;
+        let soNguyento = true;
         if (n > 2 && n % 2 === 0) {
-            soNguyento = 0;
+            soNguyento = false;
         } else {
             // Math.sqrt(n) là căn bậc 2 của n
             for (let j = 3; j <= Math.sqrt(n); j += 2) {
                 if (n % j === 0) {
-                    soNguyento = 0;
+                    soNguyento = false;
                     break;
                 }
             }
         }
-        if (soNguyento > 0) {
+        if (soNguyento) {
             daySo += n + "<br>";
             count++;
         }

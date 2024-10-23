@@ -8,19 +8,17 @@
 <script>
    let count = 0;
    let tong = 0;
-   let daySo = "";
+
    let i =1;
-   while (count !== 30){
-       if(i % 7 ===0){
-           daySo += i + " ";
-           tong += i ;
+   while (count !== 30) {
+       if (i % 7 === 0) {
+           tong += i;
            count++;
        }
        i++;
    }
    //     for(let i = 1; count !== 30 ; i++){
    //         if(i % 7 === 0){
-   //             daySo += i+" ";
    //             tong += i;
    //             count ++;
    //         }
