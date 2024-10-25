@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 5</title>
+</head>
+<body>
+<script>
+    let soTienvay = +prompt("Nhập số tiền ban đầu");
+    let soThang = +prompt("Nhập số tháng cho vay");
+    let laiSuat = 0.15;
+    let tongTien = 0;
+    for (let i = 1; i < soThang; i++) {
+        tongTien = soTienvay*Math.pow((laiSuat + 1),soThang);
+    }
+    document.write("Tổng tiền phải trả: " +tongTien.toLocaleString('vi-VN') +" đồng");
+</script>
+</body>
+</html>
