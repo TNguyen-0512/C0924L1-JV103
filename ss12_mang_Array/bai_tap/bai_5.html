@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Viết chương trình đếm số nguyên âm trong một chuỗi-->
+<script>
+    let n = +prompt("Nhập số lượng phần tử");
+    let array = new Array(n);
+    let count = 0;
+    for (let i = 0; i < array.length; i++) {
+        array[i] = +prompt("Nhập phần tử thứ: " + (i + 1));
+        if (array[i] < 0) {
+            count++;
+        }
+    }
+    document.write(array + "<br>");
+    document.write("Số lượng số nguyên âm trong mảng: " + count);
+</script>
+</body>
+</html>

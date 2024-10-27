@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  // Viết chương trình khởi tạo/nhập vào một mảng số nguyên và đảo ngược các phần tử trong mảng đó.
+      let n = +prompt("Nhập số lượng phần tử");
+      let array = new Array(n);
+      for (let i = 0; i < array.length; i++) {
+          array[i] = +prompt("Nhập phần tử thứ: " + (i + 1));
+      }
+      for (let i = array.length - 1; 0 <= i; i--) {
+          array[i] = array[i];
+          document.write(array[i] + "<br>");
+      }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 9</title>
+</head>
+<body>
+<!--Viết chương trình khởi tạo/nhập vào 2 mảng số nguyên gồm 10 phần tử, gọi là mảng a và b. Mảng c là một mảng được khai báo gồm 20 phần tử số nguyên. -->
+<!--Chương trình sẽ lưu các phần tử được nối từ hai mảng b và a vào mảng c. Hiển thị mảng c.-->
+<script>
+    let arrayA = new Array(10);
+    let arrayB = new Array(10);
+    let arrayC = [];
+    for (let i = 0; i < arrayA.length; i++) {
+        arrayA[i] = +prompt("Nhập phần tử thứ " + (i + 1)+" của mảng A");
+    }
+    document.write("Mảng A: "+arrayA+ "<br>");
+    for (let i = 0; i < arrayB.length; i++) {
+        arrayB[i] = +prompt("Nhập phần tử thứ " + (i + 1)+" của mảng B");
+    }
+    document.write("Mảng B: "+arrayB+ "<br>");
+    arrayC = arrayA;
+    for (let i = 0; i < arrayB.length; i++) {
+            arrayC.push(arrayB[i]);
+    }
+    document.write("Mảng C: "+arrayC+ "</br>")
+</script>
+</body>
+</html>
