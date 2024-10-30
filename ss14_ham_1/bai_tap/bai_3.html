@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3</title>
+</head>
+<body>
+<button onclick="checkNumber()">Tính</button>
+<script>
+  function checkNumber(numA, numB){
+    numA = +prompt("Nhập tham số thứ nhất");
+    numB = +prompt("Nhập tham số thứ hai");
+    if(numA <= numB ){
+      alert(numA + numB);
+    }else{
+      alert("Tham số thứ nhất: " +numA+ " lớn hơn tham số thứ 2: "+numB);
+    }
+  }
+</script>
+</body>
+</html>
