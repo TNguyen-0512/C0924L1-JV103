@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 5</title>
+</head>
+<body>
+<script>
+    let arr = new Array(2);
+    let index = true;
+    for (let i = 0; i < arr.length - 1; i++) {
+        arr[i] = prompt("Nhập phần tử thứ: " + (i + 1));
+        arr[i + 1] = prompt("Nhập phần tử thứ: " + (i + 2));
+        if (arr[i] !== arr[i + 1]) {
+            index = false;
+            break;
+        }
+    }
+    if (index) {
+        alert("2 chuỗi trong mảng giống nhau");
+    } else {
+        alert("2 chuỗi trong mảng không giống nhau");
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = +prompt("Nhập kích thước của mảng");
+    let arr = new Array(n);
+    for (let i = 0; i < arr.length; i++) {
+        arr[i] = prompt("Nhập phần tử thứ: " + (i + 1));
+    }
+    document.write("Mảng gồm = ["+arr+"]<br>")
+    for (let i=0; i<arr.length; i++){
+        document.write("Chuỗi \""+arr[i]+"\" có "+arr[i].length+" ký tự trong mảng <br>")
+
+    }
+</script>
+</body>
+</html>
