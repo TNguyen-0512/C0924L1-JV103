@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function checkMang(array, num) {
+        let count = 0;
+        for (let i = 0; i < array.length; i++) {
+            if (num === array[i]) {
+                count++;
+            }
+        }
+
+        if (count > 0) {
+            return count;
+        } else {
+            return -1;
+        }
+    }
+
+    let array1 = [1, 2, 3, 5, 6, 7, 7, 8, 9, 7, 0, 7];
+    let num1 = 7;
+    let result = checkMang(array1, num1);
+
+    console.log(`Mảng ban đầu: ${array1}`);
+    console.log(`Ký tự cần kiểm tra là: ${num1}`);
+    console.log(`Số lần ký tự xuất hiện trong mảng là: ${result}`);git
+</script>
+</body>
+</html>

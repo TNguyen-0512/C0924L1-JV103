@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  const pi = 3.1415;
+  function tinhChuvi(d){
+    return d * pi;
+  }
+  function tinhDientich(d){
+    return d * d * pi;
+  }
+  let duongKinh= +prompt("Nhập đường kính (cm) ");
+  document.write("Chu vi hình tròn có đường kính " + duongKinh + " cm : " + tinhChuvi(duongKinh).toFixed(2) +" cm"+"<br>");
+  document.write("Diện tích hình tròn có đường kính " + duongKinh + " cm : " + tinhDientich(duongKinh).toFixed(2)+" cm");
+</script>
+</body>
+</html>
