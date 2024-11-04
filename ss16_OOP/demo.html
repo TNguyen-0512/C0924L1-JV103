@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  //khai báo một đối đượng trực tiếp literal
+  // let student1 = {
+  //   //khai báo thuộc tính
+  //   id: 1,
+  //   name: 'Nguyên',
+  //   age: 21,
+  //   //  hành vi / hàm ==> phương thức(method)
+  //   study: function (subject) {
+  //     console.log("học viên đang học: " + subject);
+  //   },
+  //   howTogo: function (){
+  //     console.log("Đi xe máy")
+  //   }
+  // }
+  // let student2 = {
+  //   //khai báo thuộc tính
+  //   id: 2,
+  //   name: 'Nguyên2',
+  //   age: 21,
+  //   //  hành vi / hàm ==> phương thức(method)
+  //   study: function (subject) {
+  //     console.log("học viên đang học: " + subject);
+  //   },
+  //   howTogo: function (){
+  //     console.log("Đi xe máy")
+  //   }
+  // }
+  // console.log(student1.name);
+  // student1.study("Môn toán");
+  // student2.name = "Nguyên715";
+  // console.log(student2.name)
+  // student2.howTogo();
+
+  // tên class theo quy tắc PascalCase
+    //suwr dụng funcion
+ // function SinhVien(ìd, name , age){
+ //   this.id = id;
+ //   this.name = name;
+ //   this.age = age;
+ //   this.study = function (subject) {
+ //     console.log(subject);
+ //   }
+ // }
+ // dùng từ khóa class
+  class SinhVien{
+    //là 1 phương thức đặc biệt để khai báo thuộc tính và khởi tạo đối tượng
+    constructor(ma, ten, tuoi){
+        this.id = ma;
+        this.name = ten;
+        this.age = tuoi;
+    }
+    study(){
+      console.log(subject);
+    }
+  }
+  let sinhVien1 = new SinhVien(1,'Nguyên1',20);
+  let sinhVien2 = new SinhVien(2,'Nguyên2',20);
+  let sinhVien3 = new SinhVien(3,'Nguyên3',20);
+  let sinhVien3 = new SinhVien(3,'Nguyên3',20);
+  let sinhVien3 = new SinhVien(3,'Nguyên3',20);
+
+</script>
+</body>
+</html>

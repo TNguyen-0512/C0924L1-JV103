@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="hcn"></canvas>
+<script>
+  class HinhChuNhat{
+    chieuDai;
+    chieuRong;
+    constructor(chieuDai, chieuRong) {
+    this.chieuDai = chieuDai;
+    this.chieuRong = chieuRong;
+    }
+    getChieuDai(){
+      return this.chieuDai;
+    }
+    getChieuRong(){
+      return this.chieuRong;
+    }
+    setChieuDai(chieuDai){
+      this.chieuDai = chieuDai;
+    }
+    setChieuRong(chieuRong){
+      this.chieuRong = chieuRong;
+    }
+    getArena(){
+      return this.chieuDai * this.chieuRong;
+    }
+    getChuVi(){
+      return (this.chieuDai + this.chieuRong) * 2;
+    }
+  }
+  let hinhChunhat = new HinhChuNhat(200,50);
+  let chieuDai = hinhChunhat.getChieuDai();
+  let chieuRong = hinhChunhat.getChieuRong();
+  let chuVi = hinhChunhat.getChuVi();
+  let Area = hinhChunhat.getArena();
+  document.write("Chiều dài: "+hinhChunhat.getChieuDai() + "<br>");
+  document.write("Chiều rộng: "+hinhChunhat.getChieuRong()+ "<br>");
+  document.write("Diện tích: "+hinhChunhat.getArena()+ "<br>");
+  document.write("Chu vi: "+hinhChunhat.getChuVi()+ "<br>");
+
+
+  let canvas = document.getElementById("hcn");
+  let ctx = canvas.getContext('2d');
+  ctx.fillStyle='#2a88fa';
+  ctx.fillRect(10, 10, chieuDai, chieuRong)
+
+</script>
+</body>
+</html>
