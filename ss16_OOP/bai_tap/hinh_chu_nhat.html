@@ -32,6 +32,12 @@
     getChuVi(){
       return (this.chieuDai + this.chieuRong) * 2;
     }
+    veCanvas(hcn){
+        let canvas = document.getElementById("hcn");
+        let ctx = canvas.getContext('2d');
+        ctx.fillStyle='#2a88fa';
+        ctx.fillRect(10, 10, chieuDai, chieuRong)
+    }
   }
   let hinhChunhat = new HinhChuNhat(200,50);
   let chieuDai = hinhChunhat.getChieuDai();
@@ -43,11 +49,8 @@
   document.write("Diện tích: "+hinhChunhat.getArena()+ "<br>");
   document.write("Chu vi: "+hinhChunhat.getChuVi()+ "<br>");
 
+  hinhChunhat.veCanvas();
 
-  let canvas = document.getElementById("hcn");
-  let ctx = canvas.getContext('2d');
-  ctx.fillStyle='#2a88fa';
-  ctx.fillRect(10, 10, chieuDai, chieuRong)
 
 </script>
 </body>
