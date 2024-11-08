@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n;
+    do {
+        n = prompt("Nhập n")
+    } while (n <= 0 || n % 1 !== 0);
+    let array = [];
+    for (let i = 0; i < n; i++) {
+        array.push(+prompt("Nhập phần tử: " + (i + 1)));
+    }
+    document.write("Mảng vừa nhập: " + array + "<br>");
+    let result = false;
+    if (array.length < 3) {
+        result = false;
+    }
+    for (let i = 0; i < array.length / 2; i++) {
+        for (let j = 0; j < array.length / 2; j++) {
+            if (array[i] === array[array.length - 1 - j]) {
+                result = true;
+            }
+        }
+    }
+    if (result) {
+        document.write("OK");
+    } else {
+        document.write("NO");
+    }
+</script>
+</body>
+</html>

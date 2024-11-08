@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function checkTriangle(x, y, z) {
+        x = +prompt("Nhập độ dài cạnh thứ nhất");
+        y = +prompt("Nhập độ dài cạnh thứ hai");
+        z = +prompt("Nhập độ dài cạnh thứ ba");
+        if (isNaN(x) || isNaN(y) || isNaN(z) || x <= 0 || y <= 0 || z <= 0) {
+            alert("Không phải cạnh của tam giác");
+        } else if (x + y <= z || x + z <= y || y + z <= x) {
+            alert("Không phải cạnh của tam giác");
+        } else if (x * x + y * y === z * z || x * x + z * z === y * y || y * y + z * z === x * x) {
+            alert("là 3 cạnh của tam giác vuông");
+        } else {
+            alert("Chỉ là 3 cạnh của 1 tam giác");
+        }
+    }
+
+    checkTriangle();
+</script>
+</body>
+</html>
