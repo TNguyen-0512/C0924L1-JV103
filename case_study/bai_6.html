@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function kiemTra(array) {
+        let n;
+        do {
+            n = prompt("Nhập n")
+        } while (n <= 0 || n % 1 !== 0);
+        array = [];
+        for (let i = 0; i < n; i++) {
+            array.push(+prompt("Nhập phần tử: " + (i + 1)));
+        }
+        document.write("Mảng vừa nhập: " + array + "<br>");
+        let demLe = 0;
+        let demChan = 0;
+        for (let i = 0; i < array.length; i++) {
+            if (array[i] % 2 === 0) {
+                demChan++;
+            } else {
+                demLe++;
+            }
+        }
+        if (demChan === array.length) {
+            document.write(1);
+        } else if (demLe === array.length) {
+            document.write(0);
+        } else {
+            document.write(-1);
+        }
+    }
+    kiemTra();
+</script>
+</body>
+</html>
