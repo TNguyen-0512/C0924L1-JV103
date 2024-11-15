@@ -8,7 +8,7 @@
 <script>
     let nhietDo = "";
     while(nhietDo < 20 || nhietDo >100) {
-        nhietDo = +prompt("Nhập nhiệt độ hiện tại");
+        nhietDo = prompt("Nhập nhiệt độ hiện tại");
         if (isNaN(nhietDo)) {
             alert("Sai định dạng vui lòng nhập số")
         } else if (nhietDo >= 100) {

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let phanSo = prompt("nhập phân số");
+    find1(phanSo);
+    function find1(x) {
+        // kiểm x có phải là phần số /yy/aa
+        let mang = x.split("/");
+        if (mang.length==2){
+            let tu = mang[0];
+            let mau = mang[1];
+            if (tu%1==0 && mau%1==0&&mau!=0){
+                let uocChungLonNhat = timUocChungLonNhat(tu,mau);
+                if (tu%mau==0){
+                    document.write("phân số tối giản :" + tu/mau)
+                }else {
+                    document.write("phần số tối giản là :" + (tu/uocChungLonNhat)+"/"+ (mau/uocChungLonNhat))
+                }
+            }else {
+                alert("not")
+            }
+        }else {
+            alert("not")
+        }
+    }
+
+    function timUocChungLonNhat(n1,n2) {
+        let uoc =1;
+        if (n1<n2){
+            for (let i = 1 ;i <=n1 ; i++) {
+                if (n1%i==0&&n2%i==0){
+                    uoc =i;
+                }
+            }
+        }else {
+            for (let i = 1 ;i <=n2 ; i++) {
+                if (n1%i==0&&n2%i==0){
+                    uoc =i;
+                }
+            }
+        }
+        return uoc
+    }
+</script>
+</body>
+</html>
