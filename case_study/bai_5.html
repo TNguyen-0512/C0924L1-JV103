@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = parseInt(prompt("Nhập vào 1 số bất kì :"));
+
+    function findMaxNumber(n) {
+        let nString = n.toString();
+        if (nString.length !== 4) {
+            return -1;
+        }
+
+        let maxNum = -1;
+        for (let i = 0; i < 4; i++) {
+            let newNumStr = nString.slice(0, i) + nString.slice(i + 1);
+            let newNum = parseInt(newNumStr);
+
+            if (newNum > maxNum) {
+                maxNum = newNum;
+            }
+        }
+        return maxNum;
+    }
+   document.write(findMaxNumber(n));
+</script>
+</body>
+</html>

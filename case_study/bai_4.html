@@ -6,45 +6,29 @@
 </head>
 <body>
 <script>
-    let phanSo = prompt("nhập phân số");
-    find1(phanSo);
-    function find1(x) {
-        // kiểm x có phải là phần số /yy/aa
-        let mang = x.split("/");
-        if (mang.length==2){
-            let tu = mang[0];
-            let mau = mang[1];
-            if (tu%1==0 && mau%1==0&&mau!=0){
-                let uocChungLonNhat = timUocChungLonNhat(tu,mau);
-                if (tu%mau==0){
-                    document.write("phân số tối giản :" + tu/mau)
-                }else {
-                    document.write("phần số tối giản là :" + (tu/uocChungLonNhat)+"/"+ (mau/uocChungLonNhat))
-                }
-            }else {
-                alert("not")
-            }
-        }else {
-            alert("not")
-        }
-    }
+    let input = prompt("Nhập phân số (dạng a/b):");
+    find(input);
 
-    function timUocChungLonNhat(n1,n2) {
-        let uoc =1;
-        if (n1<n2){
-            for (let i = 1 ;i <=n1 ; i++) {
-                if (n1%i==0&&n2%i==0){
-                    uoc =i;
-                }
-            }
-        }else {
-            for (let i = 1 ;i <=n2 ; i++) {
-                if (n1%i==0&&n2%i==0){
-                    uoc =i;
-                }
-            }
+    function find(x) {
+        if (typeof x !== "string" || !x.includes("/")) {
+            alert("not");
+            return;
         }
-        return uoc
+
+        let arr = x.split("/"); // Tách chuỗi thành tử số và mẫu số
+        if (arr.length === 2) {
+            let tu = parseInt(arr[0]);
+            let mau = parseInt(arr[1]);
+
+            // Kiểm tra tử số và mẫu số có hợp lệ hay không
+            if (!isNaN(tu) && !isNaN(mau) && mau !== 0) {
+                alert("ok"); // Phân số hợp lệ
+            } else {
+                alert("not"); // Không hợp lệ
+            }
+        } else {
+            alert("not"); // Sai định dạng
+        }
     }
 </script>
 </body>
