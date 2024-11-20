@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2</title>
+</head>
+<body>
+<script>
+    function isPerfect(number) {
+        if (isNaN(number) || number <= 1) {
+            return false;
+        }
+        let sum = 0;
+        for (let i = 1; i <= Math.sqrt(number); i++) {
+            if (number % i === 0) {
+                sum += i;
+                if (i !== 1 && i !== number / i) {
+                    sum += number / i;
+                }
+            }
+        }
+        return sum === number;
+    }
+    let input = parseInt(prompt("Nhập số nguyên dương lớn hơn 1:"));
+    if (isPerfect(input)) {
+        document.write(`${input} là số hoàn hảo.`);
+    } else {
+        document.write(`${input} không phải là số hoàn hảo.`);
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Câu 1</title>
+</head>
+<body>
+<script>
+    let num;
+    do {
+        num = prompt("Nhập số phần tử trong mảng")
+    } while (num < 2 || num > 50 || num % 1 !== 0);
+    let array = [];
+    for (let i = 0; i < num; i++) {
+        array.push(+prompt("Nhập phần tử: " + (i + 1)));
+    }
+    document.write("Mảng vừa nhập là: " + array +"<br>");
+    let sum = 0;
+    let count = 0;
+    for (let i = 0; i < array.length; i++) {
+        if(array[i] % 3 === 0){
+            sum += array[i];
+            count++;
+        }
+    }
+    if(count === 0){
+        alert("Không có số nào chia hết cho 3 ở trong mảng");
+    }else{
+        document.write("Kết quả: "+sum/count);
+    }
+</script>
+</body>
+</html>

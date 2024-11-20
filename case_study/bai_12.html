@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quản lý học viên</title>
+</head>
+<body>
+<form action="" method="post">
+    <button type="button" id="add" onclick="addNew()">Thêm học viên mới</button>
+    <button type="button" id="correct">Sửa thông tin học viên</button>
+    <button type="button" id="delete">Xóa học viên</button>
+    <p id="displayStudent"></p>
+</form>
+<script>
+
+    class Student {
+        constructor(id, ten, lop, email, ngaySinh) {
+            this.id = id;
+            this.ten = ten;
+            this.lop = lop;
+            this.email = email;
+            this.ngaySinh = ngaySinh;
+        }
+        setId(id){
+            this.id = id;
+        }
+        getId(){
+            return this.id;
+        }
+        setTen(ten){
+            this.ten = ten;
+        }
+        getTen(ten){
+            return this.ten;
+        }
+        setLop(lop){
+            this.lop = lop;
+        }
+        getLop(lop){
+            return this.lop;
+        }
+        setEmail(email){
+            let regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            if(!regex.test(this.email)){
+                this.email = email;
+            }else{
+                alert("Email không hợp lệ !!!")
+            }
+        }
+        getEmail(){
+            return this.email;
+        }
+        setNgaySinh(ngaySinh){
+            let regex = /^\d{2}\/\d{2}\/\d{4}$/;
+            if(!regex.test(this.ngaySinh)){
+                this.ngaySinh = ngaySinh;
+            }else{
+                alert("Ngày sinh không hợp lệ !!!")
+            }
+        }
+        getNgaySinh(){
+            return this.ngaySinh;
+        }
+    }
+    let studentList = [];
+    function display(){
+        let tableString =`<table border="1" style="border-collapse: collapse">
+                            <tr>
+                                <th>Mã học viên</th>
+                                <th>Tên</th>
+                                <th>Lớp</th>
+                                <th>Email</th>
+                                <th>Ngày Sinh</th>
+                            </tr>`;
+        for (let i = 0; i < studentList.length; i++) {
+            tableString += `
+                             <tr>
+                                <td>${i + 1}</td>
+                                <td>${studentList[i].id}</td>
+                                <td>${studentList[i].ten}</td>
+                                <td>${studentList[i].lop}</td>
+                                <td>${studentList[i].email}</td>
+                                <td>${studentList[i].ngaySinh}</td>
+                            </tr>
+             `;
+        }
+        tableString += `</table>`;
+        document.getElementById('displayStudent').innerHTML = tableString;
+    }
+    display();
+</script>
+</body>
+</html>

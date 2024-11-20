@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quản lý công nhân</title>
+    <style>
+        h1 {
+            text-align: center;
+            color: blue;
+        }
+        table {
+            border-collapse: collapse;
+            width: 80%;
+            text-align: left;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+<h1>Quản lí công nhân</h1>
+<p id="manHinh"></p>
+<script>
+    class congNhan {
+        constructor(stt, ten, ngaySinh, diaChi, luong, chucVu) {
+            this.stt = stt;
+            this.ten = ten;
+            this.ngaySinh = ngaySinh;
+            this.diaChi = diaChi;
+            this.luong = luong;
+            this.chucVu = chucVu;
+        }
+    }
+    let congNhan1 = new congNhan(1, "Trương Tấn A", "11/11/1997", "Quảng Nam", "200", "Abc");
+    let congNhan2 = new congNhan(2, "Trương Tấn B", "11/11/1998", "Đà Nẵng", "200", "Abc");
+    let congNhan3 = new congNhan(3, "Trương Tấn C", "11/11/1999", "Huế", "200", "Abc");
+    let danhSachCN = [congNhan1, congNhan2, congNhan3];
+
+    function display() {
+        let tableString = `<table border="1" style="border-collapse: collapse">
+                            <tr>
+                                <th>STT</th>
+                                <th>Họ và tên</th>
+                                <th>Ngày sinh</th>
+                                <th>Địa chỉ</th>
+                                <th>Lương</th>
+                                <th>Chức vụ</th>
+                            </tr>`;
+        for (let i = 0; i < danhSachCN.length; i++) {
+            tableString += `
+                             <tr>
+                                <td>${i + 1}</td>
+                                <td>${danhSachCN[i].ten}</td>
+                                <td>${danhSachCN[i].ngaySinh}</td>
+                                <td>${danhSachCN[i].diaChi}</td>
+                                <td>${danhSachCN[i].luong}</td>
+                                <td>${danhSachCN[i].chucVu}</td>
+                            </tr>
+             `;
+        }
+        tableString += `</table>`
+        document.getElementById('manHinh').innerHTML = tableString;
+    }
+    display();
+</script>
+</body>
+</html>
